@@ -1,34 +1,136 @@
 body{
-      background-color: rgb(54, 107, 61);
+      background-image: url(asset/bg.jpg);
+      color: white;
 }
-.container{
-      width: 80%;
-      margin: auto;
+*{
+      padding: 0;
+      margin: 0;
+  }
+#container{
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+      padding-bottom: 2%;
 }
-.box1{
-      background-color: cadetblue;
-      border-bottom: 2px crimson;
+#container .box1{
+      background-color: rgb(77, 93, 94);
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 30px;
+      position: fixed;
       width: 100%;
-      padding: 10px;
+      text-align: center;
+}
+a{
+      padding: 3%;
+      text-decoration: none;
+      color: white;
 }
 #about{
-      padding-left: 5%;
-      padding-right: 5%;
-      padding-top: 5%;
-      padding-bottom: 5%;
+      padding-top: 25px;
+      padding-bottom: 2%;
+      display: flex;
+      align-items: justify;
 }
-#about .picture{
-      float: left;
-      width: 30%;
+#about .about-pic{
+      flex: 100px;
 }
-#about .aboutme{
-      float: right;
-      background-color: rgb(23, 90, 23);
-      width: 50%;
-      height: 220px;
-      padding: 15px;
+#about .about-pic img{
+      padding-top: 1%;
+      padding-bottom: 1%;
+      padding-left: 2%;
+      padding-right: 10px;
 }
-
+#about .about-text{
+      flex: 60%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      padding-left: 1%;
+      font-size: 30px;
+      background-color: rgba(0, 0, 0, 0.500);
+      color: white;
+}
+#projects{
+      padding-top: 2%;
+      padding-bottom: 2%;
+      padding-left: 1%;
+      padding-right: 1%;
+}
+#projects .project-box{
+      background-color: rgba(0, 0, 0, 0.500);
+      padding-left: 1%;
+      padding-right: 1%;
+      font-size: 25px;
+}
+#skills{
+      padding-top: 2%;
+      padding-bottom: 2%;
+      padding-left: 1%;
+      padding-right: 1%;
+}
+#skills .s1{
+      background-color: rgba(0, 0, 0, 0.500);
+      padding-left: 1%;
+      padding-right: 1%;
+      display: flex;
+      align-items: justify;
+}
+#skills .s1 .s1-txt{
+      flex: 70%;
+}
+#skills .s1 .s1-pic{
+      flex: 30%;
+}
+#skills .s2{
+      background-color: rgba(0, 0, 0, 0.500);
+      padding-left: 1%;
+      padding-right: 1%;
+      display: flex;
+      align-items: justify;
+}
+#skills .s2 .s2-txt{
+      flex: 70%;
+}
+#skills .s2 .s2-pic{
+      flex: 30%;
+}
+#skills .s3{
+      background-color: rgba(0, 0, 0, 0.500);
+      padding-left: 1%;
+      padding-right: 1%;
+      display: flex;
+      align-items: justify;
+}
+#skills .s3 .s3-txt{
+      flex: 70%;
+}
+#skills .s3 .s3-pic{
+      flex: 30%;
+}
+#contact{
+      padding-top: 2%;
+      padding-bottom: 2%;
+      padding-left: 1%;
+      padding-right: 1%;
+}
+#contact .c1{
+      background-color: rgba(0, 0, 0, 0.500);
+      padding-left: 1%;
+      padding-right: 1%;
+      display: flex;
+      align-items: justify;
+      font-size: 20px;
+}
+#contact .c1 .c1a{
+      flex: 25%;
+      text-align: right;
+}
+#contact .c1 .c1b{
+      flex: 75%;
+      text-align: center;
+}
 html{
       scroll-behavior: smooth;
 }
