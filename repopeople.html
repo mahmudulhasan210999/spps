@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>GITHUB</title>
+      <style>
+            #in1{
+                  background-color: rgba(177, 208, 243, 0.527);
+            }
+      </style>
+</head>
+<body>
+      <h1>GITHUB USERS</h1>
+      <button id="load">Load Github Users</button>
+      <br><br>
+      
+      <section>
+            <div id="in1"></div>
+      </section>
+
+      <script>
+            document.getElementById('load').addEventListener('click', loadm);
+
+            function loadm() {
+                  var req = new XMLHttpRequest();
+                  req.open('GET', 'https://api.github.com/users');
+
+                  req.onload = function() {
+                        if(req.status == 200) {
+                              var arr = JSON.parse(req.responseText);
+                              var display = '';
+                              var avatar = '';
+                              var id = '';
+                              var login = ''; 
+                              
+                              for (var x=0; x<arr.length; x++){
+
+                                    var avatar = arr[x].avatar_url;
+                                    var id= arr[x].id;
+                                    var login= arr[x].login;
+
+                                    display +=
+                                          '<img src="' + avatar + '"' + 'height=150px' + 'width= 150px' + '>' + '  ' +
+                                          'ID: ' + id + '  ' +
+                                          'Login: ' + login + '<br>' 
+                                    ;
+                              
+                                    document.getElementById('in1').innerHTML= display;            
+                              } 
+                        }
+                  }
+                  req.send();
+            }            
+      </script>
+</body>
+</html>
+
